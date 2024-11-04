@@ -68,7 +68,7 @@ function dragElement(e) {
 
 // Close button functionality
 
-document.querySelector("#selectedWin>.window-header>.close").addEventListener("click", function() {
+document.querySelector(".winbtn.close").addEventListener("click", function() {
     windowElement.style.display = "none";
 });
 document.getElementById("selectedWin").addEventListener("click", function() {
@@ -76,7 +76,7 @@ document.getElementById("selectedWin").addEventListener("click", function() {
 });
 document.querySelectorAll(".draggable-window").forEach(element => {
     element.onmousedown = function(e) {
-        document.getElementById("app-name").innerHTML = element.getElementsByClassName("window-header")[0].children[3].innerHTML
+        document.getElementById("app-name").innerHTML = element.getElementsByClassName("window-header")[0].getElementsByClassName("wintitle")[0].innerHTML
         document.onmouseup = function() {
             document.onmousemove = null;
         }
@@ -156,3 +156,11 @@ setInterval(() => {
         loadPre = loadPre + 0.5;
     }
 }, 1);
+
+function close(e) {
+   document.querySelector("#selectedWin").hidden=true;
+}
+
+document.querySelectorAll('.close').forEach((item, index) => {
+    item.onclick=close;
+})
