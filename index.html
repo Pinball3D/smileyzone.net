@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Smiley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="main" hidden>
+        <img id="macbg" src="images/macbg.png" onclick="document.getElementById('app-name').innerHTML = 'Finder'"></img>
+        <div class="menu-bar">
+            <div class="menu-left">
+                <img src="images/apple.png" alt="Apple" class="apple-logo menu-item">
+                <span class="menu-item" id="app-name">Finder</span>
+                <span class="menu-item">File</span>
+                <span class="menu-item">Edit</span>
+                <span class="menu-item">Window</span>
+                <span class="menu-item">Help</span>
+            </div>
+            <div class="menu-right">
+                <p class="menu-item">73%</p>
+                <p class="menu-item">Sun Nov 3</p>
+                <span class="menu-item" id="date-time"></span>
+            </div>
+        </div>
+        <div id="windowarea">
+            <div class="draggable-window" id="selectedWin">
+                <div class="window-header">
+                    <div class=" winbtn close"></div>
+                    <div class="winbtn min"></div>
+                    <div class="winbtn full"></div>
+                    <span class="wintitle">Welcome!</span>
+                </div>
+                <div class="window-content">
+                    <p class="largeTitle">Welcome to my computer!</p>
+                    <p class="appleFont">Open Apps to find out more about me!</p>
+                    <div class="appleFont">Some cool things to note: </div>
+                    <ul class="appleFont">
+                        <li>
+                            <div>The battery precentage matches my irl battery on my MacBook</div>
+                        </li>
+                        <li>
+                            <div>The time and date you see are the time and date for me on the East Coast!</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="draggable-window" style="top: 500px;">
+                <div class="window-header">
+                    <div class=" winbtn close"></div>
+                    <div class="winbtn min"></div>
+                    <div class="winbtn full"></div>
+                    <span class="wintitle">Projects</span>
+                </div>
+                <div class="window-content">
+                    <p class="largeTitle">Projects</p>
+                    <span>
+                        Chirp for iOS
+                    </span>
+                </div>
+            </div>
+            <div class="draggable-window mail" style="left: 500px; top: 350px;" hidden>
+                <div class="window-header">
+                    <div class=" winbtn close"></div>
+                    <div class="winbtn min"></div>
+                    <div class="winbtn full"></div>
+                    <span class="wintitle">Mail</span>
+                </div>
+                <div class="window-content">
+                    <p class="largeTitle">Contact</p>
+                    <span class="appleFont">
+                        Contact me! contact@smileyzone.net
+                    </span>
+                </div>
+            </div>
+            <div class="draggable-window socials" style="left: 500px; top: 350px;">
+                <div class="window-header">
+                    <div class=" winbtn close"></div>
+                    <div class="winbtn min"></div>
+                    <div class="winbtn full"></div>
+                    <span class="wintitle">Socials</span>
+                </div>
+                <div class="window-content">
+                    <p class="largeTitle">Find Me!</p>
+                    <span class="appleFont">
+                        <p><a>X</a></p>
+                        <p><a>Github</a></p>
+                        <p><a>Discord</a></p>
+                        <p><a>Bluesky</a></p>
+                    </span>
+                </div>
+            </div>
+            <div class="draggable-window tech" style="left: 500px; top: 350px;">
+                <div class="window-header">
+                    <div class=" winbtn close"></div>
+                    <div class="winbtn min"></div>
+                    <div class="winbtn full"></div>
+                    <span class="wintitle">Tech</span>
+                </div>
+                <div class="window-content">
+                    <p class="largeTitle">Tech I Use</p>
+                    <span class="appleFont">
+                        <ul>
+                            <li>
+                                This 2021 MacBook Pro 14" M1 Pro 10 Cores 16GB 1TB
+                            </li>
+                            <li>
+                                iPhone 15 Pro Max
+                            </li>
+                            <li>
+                                AirPods Pro
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="dock">
+            <img src="images/finder.png" class="appicon" />
+            <img src="images/lp.png" class="appicon" />
+            <img src="images/arc.png" class="appicon" />
+            <img src="images/messages.png" class="appicon" />
+            <img src="images/music.png" class="appicon" />
+            <img src="images/xc.png" class="appicon" />
+            <img src="images/mail.png" class="appicon" onclick="document.querySelector('.mail').hidden=false" />
+        </div>
+    </div>
+    <div id="loading">
+        <img id="applelogoload" src="images/apple.png">
+        <div id="progBar">
+            <div id="prog"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

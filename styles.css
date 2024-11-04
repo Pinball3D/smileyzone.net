@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f0f0;
+    user-select: none;
+}
+.menu-bar {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(0 0 0 / .18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    margin-right: 15px;
+    font-size: 13px;
+    color: white;
+}
+.menu-left > .menu-item{
+    margin-right: 15px;
+    font-size: 13px;
+    color: white;
+    padding: 5px;
+}
+.menu-left > #app-name {
+    margin-right: 15px;
+    font-size: 13px;
+    color: white;
+    padding: 3px;
+}
+.apple-logo {
+    width: 14px;
+    margin-right: 10px;
+}
+
+.menu-icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+}
+
+#date-time {
+    font-size: 13px;
+    margin-right: 15px;
+    padding-right: 3px;
+}
+#app-name {
+    font-weight: bold;
+}
+#macbg {
+    position: fixed;
+    width: 100vw;  /* Full viewport width */
+            height: 100vh;  /* Full viewport height */
+            overflow: hidden;
+}
+#dock {
+    background-color: rgb(16 16 16 / .4);
+    border: 1px solid #1A1A1A;
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    max-width: 97.5%;
+    transform: translate(-50%);
+    border-radius: 15px;
+}
+
+.appicon {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+    bottom: 1px;
+}
+.appicon:hover {
+    transform: scale(1.5);
+}
+
+
+.draggable-window {
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1f1f1f;
+    border: 1px solid #040404;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.window-header {
+    background-color: #2a2a29;
+    color: white;
+    padding: 10px;
+    cursor: default;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: left;
+    vertical-align: middle;
+}
+
+.window-header span {
+    font-size: 16px;
+}
+.winbtn {
+    display:inline-block;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+}
+.close { background-color: #FF605C; }
+.min { background-color: #FFBD44; }
+.full { background-color:  #00CA4E; margin-right: 6px; }
+.window-content {
+    padding: 0px 20px 20px 20px;
+    text-align: left;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.appicon.zoom {
+    transform: scale(1.5); /* Main zoomed icon */
+}
+
+/* Neighboring items zoomed less */
+.appicon.neighbor {
+    transform: scale(1.3); /* Smaller zoom for neighbors */
+}
+.appicon.neighbor2 {
+    transform: scale(1.15); /* Smaller zoom for neighbors */
+}
+
+.draggable-window:not(#selectedWin){
+    z-index: 0;
+}
+#windowarea {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    cursor: none;
+}
+#progBar {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    background-color: #5b5b5b;
+    border-radius: 15px;
+}
+  
+#prog {
+    height: 15px;
+    background-color: white;
+    border-radius: 15px;
+}
+#applelogoload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75px;
+}
+
+
+.largeTitle {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-weight: bold;
+}
+.appleFont {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
